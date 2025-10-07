@@ -1,6 +1,16 @@
 # Benchmarking-Multi-Tenant-Architectures-in-PostgreSQL
 
 This repository contains the source code used to reproduce the examples presented in the paper.
+The code relies on open-source software, in particular the Python package [Bexhoma](https://github.com/Beuth-Erdelt/Benchmark-Experiment-Host-Manager).
+
+## Content
+
+* experiments folder with init scripts for TPC-C and TPC-H
+* k8s folder with deployment manifest for PostgreSQL
+* notebooks folder with evaluation notebooks
+* experiments.sh bash script to run experiments
+* cluster.config to config Bexhoma package for experiments
+
 
 ## Prerequisits
 
@@ -9,6 +19,11 @@ This repository contains the source code used to reproduce the examples presente
 * Have `kubectl` working to connect to the cluster
 
 We recommend to use a Python environment like `conda create -n bexhoma python==3.11.9 ipython`.
+
+To fully reproduce the results, you will need a strong node for hosting PostgreSQL (64 cores, 512 GB RAM).
+It is addressed by `BEXHOMA_NODE_SUT="cl-worker11"` in the scrips.
+You will also need a strong node for hosting the tenants (drivers).
+It is addressed by `BEXHOMA_NODE_LOAD="cl-worker19"`and `BEXHOMA_NODE_BENCHMARK="cl-worker19"` in the scrips.
 
 ## Installation
 
@@ -22,7 +37,7 @@ We recommend to use a Python environment like `conda create -n bexhoma python==3
 
 ## Run the Experiments
 
-See [script](experiments.sh) to run experiments from bash.
+See the provided [script](experiments.sh) to run experiments from bash within your created directory.
 
 Warning: It takes weeks (!) to run all experiments completely.
 
