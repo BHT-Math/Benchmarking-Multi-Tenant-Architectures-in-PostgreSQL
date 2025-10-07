@@ -38,6 +38,11 @@ It is addressed by `BEXHOMA_NODE_LOAD="cl-worker19"`and `BEXHOMA_NODE_BENCHMARK=
 ## Run the Experiments
 
 See the provided [script](experiments.sh) to run experiments from bash within your created directory.
+The script
+* prepares some environment variables
+* sets the most important PostgreSQL configuration parameters
+* loops over the number of tenants
+* runs TPC-C / TPC-H experiments with the tenant's data isolated per schema, per database or per container
 
 Note: Executing all experiments may require a considerable amount of time.
 
