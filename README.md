@@ -39,7 +39,7 @@ It is addressed by `BEXHOMA_NODE_LOAD="cl-worker19"`and `BEXHOMA_NODE_BENCHMARK=
 
 See the provided [script](experiments.sh) to run experiments from bash within your created directory.
 
-Warning: It takes weeks (!) to run all experiments completely.
+Note: Executing all experiments may require a considerable amount of time.
 
 Note: The provided script does not configure the [Kubernetes CPUManager Policy](https://kubernetes.io/blog/2024/08/22/cpumanager-static-policy-distributed-cpu-across-cores/), as this setting cannot be modified from the client side.
 Please refer to the official Kubernetes documentation for instructions on configuring this policy.
