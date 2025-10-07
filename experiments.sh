@@ -51,7 +51,7 @@ sed -i 's/random_page_cost=1/random_page_cost=60/' k8s/deploymenttemplate-Postgr
 
 experiment_extension="01_pvc"
 
-for i in {1..2}; do
+for i in {1..10}; do
     # Set local variables
     BEXHOMA_TENANTS=$i
     tenants=$BEXHOMA_TENANTS
@@ -130,7 +130,7 @@ sed -i 's/random_page_cost=1/random_page_cost=60/' k8s/deploymenttemplate-Postgr
 
 experiment_extension="02_local"
 
-for i in {1..2}; do
+for i in {1..10}; do
     # Set local variables
     BEXHOMA_TENANTS=$i
     tenants=$BEXHOMA_TENANTS
@@ -213,7 +213,7 @@ sed -i 's/random_page_cost=60/random_page_cost=1/' k8s/deploymenttemplate-Postgr
 
 experiment_extension="04_ramdisk"
 
-for i in {1..2}; do
+for i in {1..10}; do
     # Set local variables
     BEXHOMA_TENANTS=$i
     tenants=$BEXHOMA_TENANTS
@@ -294,7 +294,7 @@ sed -i 's/random_page_cost=60/random_page_cost=1/' k8s/deploymenttemplate-Postgr
 
 experiment_extension="05_localdurable"
 
-for i in {1..2}; do
+for i in {1..10}; do
     # Set local variables
     BEXHOMA_TENANTS=$i
     tenants=$BEXHOMA_TENANTS
@@ -378,7 +378,7 @@ BEXHOMA_NUM_RUN=5
 BEXHOMA_CPU=40
 BEXHOMA_RAM=480
 
-for i in {1..2}; do
+for i in {1..10}; do
     # Set local variables
     BEXHOMA_TENANTS=$i
     tenants=$BEXHOMA_TENANTS
